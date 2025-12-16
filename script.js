@@ -10,11 +10,9 @@ const addUserForm = document.getElementById("addUserForm");
 async function fetchUsers() {
     try {
         loadingDiv.style.display = "block";
-        const response = await fetch(API_URL);
+        const response = await axios.get(API_URL);
 
-        if (!response.ok) throw new Error("Lỗi kết nối API");
-
-        const users = await response.json();
+        const users = response.data;
         const localUsers = JSON.parse(localStorage.getItem("localUsers")) || [];
         renderTable([...users, ...localUsers]);
     } catch (error) {
@@ -98,17 +96,9 @@ addUserForm.addEventListener("submit", async (e) => {
         submitBtn.innerText = "Đang xử lý...";
         submitBtn.disabled = true;
 
-        const response = await fetch(API_URL, {
-            method: "POST",
-            body: JSON.stringify(newUser),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8",
-            },
-        });
+        const response = await axios.post(API_URL, newUser);
 
-        if (!response.ok) throw new Error("Lỗi khi thêm user");
-
-        const createdUser = await response.json();
+        const createdUser = response.data;
 
         createdUser.id = userTableBody.rows.length + 1;
 
