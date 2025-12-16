@@ -1,54 +1,17 @@
-# DevPlus Exercises
+# DevPlus Pair Review Exercises
 
-Chào mừng đến với kho lưu trữ bài tập thực hành tại DevPlus. Repo này được tổ chức theo cấu trúc: mỗi bài tập sẽ nằm trên một nhánh (branch) riêng biệt để dễ dàng quản lý và review.
+Chào mừng đến với kho bài tập thực hành. Dưới đây là danh sách các bài tập theo từng nhánh.
 
-## 📚 Danh sách bài tập (Menu)
+## 📚 Danh sách bài tập
 
-1.  [**Bài 01: User Management (Peer Review)**](#-chi-tiết-bài-1-user-management-peer-review)
+### 1. [Bài 01: User Management](https://github.com/Dominic2k/dev-plus-exercises/tree/16-12-2025/peer-review)
+*   **Mô tả:** Quản lý user, Fetch API, Validation, LocalStorage.
+*   **Trạng thái:** ✅ Đã hoàn thành
+*   **Nhánh:** `feature/user-management` (hoặc tên nhánh bạn đặt)
 
-    -   _Mô tả:_ Quản lý user, gọi API, Validate Form.
-    -   _Trạng thái:_ ✅ Đang xem
-
-2.  **Bài 02: Coming soon...** (⏳)
-
----
-
-## 📝 Chi tiết Bài 1: User Management (Peer review)
-
-### 1. Giới thiệu
-
-Đây là bài tập khởi động nhằm ôn tập kiến thức về **Vanilla JavaScript**, thao tác với **DOM** và xử lý bất đồng bộ với **Fetch API**. Ứng dụng mô phỏng một trang quản lý danh sách người dùng đơn giản.
-
-### 2. Công nghệ sử dụng
-
--   **HTML5 / CSS3**: Xây dựng giao diện và Modal.
--   **JavaScript (ES6+)**: Xử lý logic.
--   **API**: [JSONPlaceholder](https://jsonplaceholder.typicode.com/) (Mock API).
-
-### 3. Chức năng chính (Features)
-
--   **Hiển thị danh sách (Read):**
-
-    -   Tự động tải danh sách 10 user từ API khi vào trang.
-    -   Có hiệu ứng loading khi đang chờ dữ liệu.
-
--   **Thêm mới User (Create):**
-    -   Sử dụng Modal để nhập thông tin.
-    -   **Validation:** Kiểm tra dữ liệu đầu vào chặt chẽ (Tên không được rỗng, Email đúng định dạng, Phone phải là số và đủ độ dài).
-    -   **Auto ID:** Logic tự động tăng ID dựa trên số lượng dòng hiện tại trong bảng (`length + 1`).
-
-### 4. Cấu trúc file
-
--   `index.html`: Cấu trúc trang web.
--   `style.css`: Định dạng giao diện.
--   `script.js`: Chứa toàn bộ logic fetch API, validate và xử lý sự kiện.
-
-### 5. Lưu ý quan trọng
-
-Do sử dụng **JSONPlaceholder** (API giả lập):
-
-1.  Khi bạn bấm "Thêm User", API trả về thành công (Status 201) nhưng **không thực sự lưu vào database** của họ.
-2.  Dữ liệu hiển thị trên bảng là dữ liệu giả lập được nối thêm vào DOM.
-3.  Nếu tải lại trang (F5), các user mới thêm sẽ biến mất và trở về danh sách mặc định ban đầu.
+### 2. Bài 02: Coming soon...
+*   **Mô tả:** ...
+*   **Trạng thái:** ⏳ Đang chờ
 
 ---
+*Click vào tên bài tập để chuyển sang nhánh chứa code tương ứng.*
