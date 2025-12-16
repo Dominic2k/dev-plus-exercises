@@ -15,7 +15,8 @@ async function fetchUsers() {
         if (!response.ok) throw new Error("Lỗi kết nối API");
 
         const users = await response.json();
-        renderTable(users);
+        const localUsers = JSON.parse(localStorage.getItem("localUsers")) || [];
+        renderTable([...users, ...localUsers]);
     } catch (error) {
         console.error("Error:", error);
         alert("Không thể tải danh sách user.");
@@ -110,6 +111,10 @@ addUserForm.addEventListener("submit", async (e) => {
         const createdUser = await response.json();
 
         createdUser.id = userTableBody.rows.length + 1;
+
+        const localUsers = JSON.parse(localStorage.getItem("localUsers")) || [];
+        localUsers.push(createdUser);
+        localStorage.setItem("localUsers", JSON.stringify(localUsers));
 
         const row = document.createElement("tr");
         row.innerHTML = `

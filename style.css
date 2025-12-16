@@ -65,6 +65,8 @@ button#openModalBtn:hover {
 .table-responsive {
     width: 100%;
     overflow-x: auto;
+    overflow-y: auto;
+    max-height: 75vh;
     border: 1px solid var(--gray-light);
     border-radius: var(--radius);
 }
