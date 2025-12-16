@@ -1,4 +1,4 @@
-# DevPlus Pair Review Exercises
+# DevPlus Exercises
 
 Chào mừng đến với kho bài tập thực hành. Dưới đây là danh sách các bài tập theo từng nhánh.
 
@@ -15,3 +15,4 @@ Chào mừng đến với kho bài tập thực hành. Dưới đây là danh s�
 
 ---
 *Click vào tên bài tập để chuyển sang nhánh chứa code tương ứng.*
+
