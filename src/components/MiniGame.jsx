@@ -9,7 +9,7 @@ const MiniGame = () => {
         const val = parseInt(guess);
         if (val === number) {
             setResult("🎉 Chính xác! Bạn quá đỉnh!");
-            setNumber(Math.floor(Math.random() * 10) + 1); // Reset game
+            setNumber(Math.floor(Math.random() * 10) + 1);
         } else {
             setResult(
                 val > number ? "📉 Thấp hơn chút nữa!" : "📈 Cao hơn chút nữa!"

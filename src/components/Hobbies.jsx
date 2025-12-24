@@ -6,22 +6,22 @@ const Hobbies = () => {
         {
             icon: <Gamepad2 size={32} />,
             name: "Gaming",
-            desc: "League of Legends, CS:GO",
+            desc: "League of Legends, Wild Rift",
         },
         {
             icon: <Music size={32} />,
             name: "Âm nhạc",
-            desc: "Indie, Pop Ballad",
+            desc: "Pop, Rap and EDM",
         },
         {
             icon: <Plane size={32} />,
             name: "Du lịch",
-            desc: "Khám phá vùng đất mới",
+            desc: "Khám phá vùng đất mới và ăn những món ngon",
         },
         {
             icon: <Book size={32} />,
             name: "Đọc sách",
-            desc: "Sách kỹ thuật & Đắc nhân tâm",
+            desc: "Sách kỹ thuật & tâm lý - phát triển bản thân",
         },
     ];
 
