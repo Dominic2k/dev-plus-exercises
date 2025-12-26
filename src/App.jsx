@@ -10,10 +10,14 @@ import AnonymousMessage from "./components/AnonymousMessage";
 import MiniGame from "./components/MiniGame";
 import useGithubProjects from "./hooks/useGithubProjects";
 import MatrixRain from "./components/MatrixRain";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
+import "antd/dist/reset.css";
 
 function App() {
     const [activeTab, setActiveTab] = useState("profile");
     const projectList = useGithubProjects("dominic2k", 30);
+    const { t } = useTranslation();
 
     const renderContent = () => {
         switch (activeTab) {
@@ -54,7 +58,7 @@ function App() {
                     }`}
                     onClick={() => setActiveTab("profile")}
                 >
-                    Profile
+                    {t("profile")}
                 </button>
                 <button
                     className={`tab-btn ${
@@ -62,7 +66,7 @@ function App() {
                     }`}
                     onClick={() => setActiveTab("repos")}
                 >
-                    Github Repos
+                    {t("githubRepos")}
                 </button>
                 <button
                     className={`tab-btn ${
@@ -70,7 +74,7 @@ function App() {
                     }`}
                     onClick={() => setActiveTab("hobbies")}
                 >
-                    Sở thích
+                    {t("hobbies")}
                 </button>
                 <button
                     className={`tab-btn ${
@@ -78,7 +82,7 @@ function App() {
                     }`}
                     onClick={() => setActiveTab("contact")}
                 >
-                    Liên hệ
+                    {t("contact")}
                 </button>
                 <button
                     className={`tab-btn ${
@@ -86,7 +90,7 @@ function App() {
                     }`}
                     onClick={() => setActiveTab("message")}
                 >
-                    Nhắn ẩn danh
+                    {t("anonymousMessage")}
                 </button>
                 <button
                     className={`tab-btn ${
@@ -94,8 +98,9 @@ function App() {
                     }`}
                     onClick={() => setActiveTab("game")}
                 >
-                    Mini Game
+                    {t("miniGame")}
                 </button>
+                <LanguageSwitcher />
             </nav>
 
             <div className="tab-content">{renderContent()}</div>

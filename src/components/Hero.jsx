@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Hero = ({ personalInfo, socialLinks }) => {
+    const { t } = useTranslation();
+
     return (
         <header className="hero">
             <div className="hero-content">
-                <h1 className="name">{personalInfo.name}</h1>
-                <h2 className="title">{personalInfo.title}</h2>
-                <p className="about">{personalInfo.about}</p>
+                <h1 className="name">{t("name")}</h1>
+                <h2 className="title">{t("title")}</h2>
+                <p className="about">{t("about")}</p>
 
                 <div className="socials">
                     {socialLinks.map((link) => (

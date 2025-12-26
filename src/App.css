@@ -256,3 +256,35 @@ body {
     min-height: 400px; /* Giữ chiều cao tối thiểu để tránh giật layout */
     animation: fadeIn 0.5s ease;
 }
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    align-items: center;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
+}
+
+.lang-btn.active {
+    background-color: var(--accent);
+    color: #0f172a;
+    border-color: var(--accent);
+}
